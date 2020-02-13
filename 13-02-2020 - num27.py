@@ -26,8 +26,7 @@ def is_balanced(string):
                 elif string[k] == ']' and lifo[-1] == '[':
                     lifo.pop(-1)
                 else: return False
-    if len(lifo) == 0: return True
-    else: return False
+    return len(lifo) == 0
 
 print(is_balanced(test1))
 print(is_balanced(test2))
