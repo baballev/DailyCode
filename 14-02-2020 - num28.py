@@ -4,7 +4,9 @@
 # euclidian division of remaining_k by the (number of words - 1) already used -> q number of extra  space between each word and rest = add until done
 
 # Dangerous cases: the word length is superior to k at the start
-#                  There is a single word on the line -> divide by 0
+
+
+# TODO: Try to use string.join() more often as well as (for i, element in enumerate(list))
 
 k =  16
 te = ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]
@@ -45,7 +47,8 @@ def pad(remaining_k, line):
     words = line.split(" ")
     print(words)
     n = len(words)
-    q, r = remaining_k // (n-1), remaining_k % (n-1)
+    if n != 0: q, r = remaining_k // (n-1), remaining_k % (n-1)
+    else: q, r = -1, n
     line = ""
     l = 0
     while (l<(n-1)):
