@@ -22,22 +22,29 @@ def justify(text, length):
             remaining_k -= j
             current_line += text[i]
             i += 1
+            output.append(pad(remaining_k, current_line))
+            current_line = ""
+            remaining_k = length # Reset count
         elif (j+1 <= remaining_k):
-            remaining_k -= j+1
+            remaining_k -= (j+1)
             current_line += text[i] + " "
             i += 1
         else:
-            output.append(justify(remaining_k, current_line))
+            current_line = current_line[:-1]
+            remaining_k += 1
+            output.append(pad(remaining_k, current_line))
             current_line = ""
             remaining_k = length # Reset count
-    output.append(justify(remaining_k, current_line))
+    current_line = current_line[:-1]
+    remaining_k += 1
+    output.append(pad(remaining_k, current_line))
 
     return output
 
 def pad(remaining_k, line):
     words = line.split(" ")
+    print(words)
     n = len(words)
-    if remaining_k != 0: remaining_k += 1 # Delete the extra space at the end of the line
     q, r = remaining_k // (n-1), remaining_k % (n-1)
     line = ""
     l = 0
