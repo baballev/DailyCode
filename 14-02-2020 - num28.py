@@ -6,7 +6,16 @@
 # Dangerous cases: the word length is superior to k at the start
 
 
-# TODO: Try to use string.join() more often as well as (for i, element in enumerate(list))
+## Python tips:
+# string.join()
+# for i, element in enumerate(list)
+# ** & *: print(*list) allows unpacking of the iterable in the function argument
+# ** allows unpacking of dictionary: "{year}-{month}.txt".format(**date_info)
+# def(*dice) -> any number of arguments
+# def get_trucs(*arg1, arg2, arg3="ok"): -> arg2 and arg3 can't be passed to The
+# function as positional args as they come after arg1 with a *
+# Comprehension list: [function(x) for x in iterable if x > 9]
+##
 
 k =  16
 te = ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]
