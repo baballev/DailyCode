@@ -1,5 +1,6 @@
 # Compute how many units of water can be trapped in a map of integers
 # representing wall heights
+# Restriction: O(N) time complexitty and O(1) space complexity
 ## Brouillon
 # 1) Calculate local maximums in the list
 # 2) For each max, find the next closest max or the next superior/equal max
