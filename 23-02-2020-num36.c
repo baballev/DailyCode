@@ -1,7 +1,7 @@
 // Given the root of Binary Search Tree, find the second largest node in
 // the tree.
-// An easy solution to implement consists of symetrically searching it and
-// return the last before last node, but time complexity is O(n) for this
+// An easy solution to implement consists of in-order traversal it and
+// return the node before last, but time + space complexity is O(n) for this
 // solution. Here is a O(log(n)) approach.
 # include <stdio.h>
 # include <stdlib.h>
